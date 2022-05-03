@@ -50,7 +50,7 @@ void Stack<T>::Pop()
 		cerr << "The stack is empty." << endl;	
 
 	else
-    {
+    	{
 		StackNode<T>* ptr = head;
 		head = head->next;
 		delete[] ptr;
@@ -76,8 +76,8 @@ T Stack<T>::Peek()const
     if(head == NULL)
     {
         cerr << "The stack is empty." <<endl;
-		return T(NULL);
-	}
+	return T(NULL);
+    }
 	
     else
         return temp->data;
@@ -148,7 +148,7 @@ StackNode<T>* Stack<T>::Search(T item)const
 	if(success == false)
 	{
 		cerr << item << " was not found." << endl;
-        return NULL;
+                return NULL;
 	}
 
     return temp;
@@ -181,7 +181,7 @@ void Stack<T>::Print()const
 		while (temp != NULL)
 		{
 			cout << temp->data << endl;	
-        	temp= temp->next;
+        		temp= temp->next;
 		}
 		cout << "-------------" << endl;
 	}
