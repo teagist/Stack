@@ -47,8 +47,8 @@ public:
 	StackNode<T>* Search(T item) const;	
 	void Print() const;
 
-    Stack(const Stack& myStack);                   
-    Stack& operator=(const Stack& myStack);        
-    ~Stack();                                          
+    	Stack(const Stack& myStack);                   
+    	Stack& operator=(const Stack& myStack);        
+    	~Stack();                                          
 };
 #endif
