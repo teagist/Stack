@@ -29,7 +29,7 @@ int main()
     Stack<int> myStack;
     printMenu();
     choose(myStack);
-	return 0;
+    return 0;
 }
 
 
@@ -46,10 +46,10 @@ void printMenu()
 {
     cout << " _____________________________" << endl;
     cout << "| +Item  | Push Item          | " << endl;
-	cout << "|   -    | Pop Item           | " << endl;
+    cout << "|   -    | Pop Item           | " << endl;
     cout << "| ?Item  | Search Item        | " << endl;
     cout << "|   @    | Peek               | " << endl;
-	cout << "|   D    | Destory the Stack  | " << endl;
+    cout << "|   D    | Destory the Stack  | " << endl;
     cout << "|________|____________________| " << endl << endl;
     cout << "Please choose an operation to perform on a stack." << endl;
     cout << "Enter Q to quit." << endl;
@@ -81,37 +81,37 @@ void choose(Stack<T>& myStack)
     {
         switch (choice)
         {
-			case '+':
-				validateInput(value);
-				myStack.Push(value);
-				break;
-			case '-':
-			    myStack.Pop();
-				break;
-			case '?':
-                validateInput(value);
-                myStack.Search(value);
-                system("pause");
-				break;
-			case '@' :
+		case '+':
+			validateInput(value);
+			myStack.Push(value);
+			break;
+		case '-':
+			myStack.Pop();
+			break;
+		case '?':
+                	validateInput(value);
+                	myStack.Search(value);
+                	system("pause");
+			break;
+		case '@' :
+			cout << endl;
+			if (myStack.Peek())
+			{
+				cout << "The top of the stack is: " << myStack.Peek();
 				cout << endl;
-				if (myStack.Peek())
-				{
-					cout << "The top of the stack is: " << myStack.Peek();
-					cout << endl;
-				}
-				system("pause");
-				break;
-			case 'd': case 'D':
-				myStack.~Stack();
-				break;
-            case 'q': case 'Q':
-                exit(1);
-			default:
-				cerr << "\nInvalid choice. Please try again." << endl;
-				cout << endl;
-                system("pause");
-		}
+			}
+			system("pause");
+			break;
+		case 'd': case 'D':
+			myStack.~Stack();
+			break;
+            	case 'q': case 'Q':
+                	exit(1);
+		default:
+			cerr << "\nInvalid choice. Please try again." << endl;
+			cout << endl;
+                	system("pause");
+	}
         system("cls");
         printMenu();
         cout << endl;
@@ -148,7 +148,7 @@ T validateInput(T &val)
 			system("cls");
 			printMenu();
 			cerr << endl << "Please enter a valid item for the stack." << endl;
-        	cout << endl << ">> value: ";
+        		cout << endl << ">> value: ";
 		}
 	}
 	return val;
