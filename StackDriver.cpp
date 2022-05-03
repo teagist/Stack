@@ -51,7 +51,7 @@ void printMenu()
     cout << "|   @    | Peek               | " << endl;
     cout << "|   D    | Destory the Stack  | " << endl;
     cout << "|________|____________________| " << endl << endl;
-    cout << "Please choose an operation to perform on a stack." << endl;
+    cout << "Please choose an operation to perform on the stack." << endl;
     cout << "Enter Q to quit." << endl;
 }
 
